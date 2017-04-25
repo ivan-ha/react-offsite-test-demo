@@ -5,3 +5,14 @@
 .list-group-item:hover {
     background-color: #eee;
 }
+
+ul.nav {
+    white-space: nowrap;
+    overflow-x: auto;
+    width: 100%;
+}
+
+ul.nav li {
+    display: inline-block;
+    float: none;
+}

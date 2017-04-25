@@ -1,8 +1,86 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-
 import ListView from './components/list-view'
+import NavigationBar from './components/navigation-bar'
 
+const categories = [
+    {
+        url: '#',
+        text: '01觀點'
+    },
+    {
+        url: '#',
+        text: '01博評'
+    },
+    {
+        url: '#',
+        text: '社區'
+    },
+    {
+        url: '#',
+        text: '娛樂'
+    },
+    {
+        url: '#',
+        text: '韓國大選'
+    },
+    {
+        url: '#',
+        text: '國際'
+    },
+    {
+        url: '#',
+        text: '女生'
+    },
+    {
+        url: '#',
+        text: '藝術3月'
+    },
+    {
+        url: '#',
+        text: '藝文創意'
+    },
+    {
+        url: '#',
+        text: '體育'
+    },
+    {
+        url: '#',
+        text: '熱話'
+    },
+    {
+        url: '#',
+        text: '科技玩物'
+    },
+    {
+        url: '#',
+        text: '01哲學'
+    },
+    {
+        url: '#',
+        text: '武備志'
+    },
+    {
+        url: '#',
+        text: '一物'
+    },
+    {
+        url: '#',
+        text: '01影像'
+    },
+    {
+        url: '#',
+        text: '01活動'
+    },
+    {
+        url: '#',
+        text: '01空間'
+    },
+    {
+        url: '#',
+        text: '會員專區'
+    },
+];
 const dummyData = [
     {
         key: 'd23d32ifhu',
@@ -30,7 +108,10 @@ const dummyData = [
 class App extends Component {
     render() {
         return (
-            <ListView articles={dummyData} />
+            <div>
+                <NavigationBar categories={categories} />
+                <ListView articles={dummyData} />
+            </div>
         );
     }
 }
