@@ -1,20 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ListViewItem from './list-view-item';
 
-const ListView = (props) => {
-    const listItems = props.articles.map((article) => {
-        return (
-            <ListViewItem
-                key={article.key}
-                article={article} />
-        );
-    });
+class ListView extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-    return (
-        <ul className='col-md-8 list-group'>
-            {listItems}
-        </ul>
-    );
-};
+    render() {
+        const listItems = this.props.articles.map((article) => {
+            return (
+                <ListViewItem
+                    key={article.key}
+                    article={article} />
+            );
+        });
+
+        return (
+            <ul className='col-md-8 list-group'>
+                {listItems}
+            </ul>
+        );
+    }
+}
 
 export default ListView;
