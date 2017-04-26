@@ -16,3 +16,7 @@ ul.nav li {
     display: inline-block;
     float: none;
 }
+
+body {
+    padding-top: 110px;
+}
