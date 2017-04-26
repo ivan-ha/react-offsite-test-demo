@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:ivan-ha/react-offsite-test-demo.git",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start": "node ./node_modules/json-server/bin/index.js --watch data/db.json & node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "Ivan Ha",
   "license": "ISC",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "json-server": "^0.9.6",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",

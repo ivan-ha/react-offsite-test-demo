@@ -1,0 +1,169 @@
+{
+    "categories": [
+        {
+            "id": "1",
+            "url": "#",
+            "text": "01觀點"
+        },
+        {
+            "id": "2",
+            "url": "#",
+            "text": "01博評"
+        },
+        {
+            "id": "3",
+            "url": "#",
+            "text": "社區"
+        },
+        {
+            "id": "4",
+            "url": "#",
+            "text": "娛樂"
+        },
+        {
+            "id": "5",
+            "url": "#",
+            "text": "韓國大選"
+        },
+        {
+            "id": "6",
+            "url": "#",
+            "text": "國際"
+        },
+        {
+            "id": "7",
+            "url": "#",
+            "text": "女生"
+        },
+        {
+            "id": "8",
+            "url": "#",
+            "text": "藝術3月"
+        },
+        {
+            "id": "9",
+            "url": "#",
+            "text": "藝文創意"
+        },
+        {
+            "id": "10",
+            "url": "#",
+            "text": "體育"
+        },
+        {
+            "id": "11",
+            "url": "#",
+            "text": "熱話"
+        },
+        {
+            "id": "12",
+            "url": "#",
+            "text": "科技玩物"
+        },
+        {
+            "id": "13",
+            "url": "#",
+            "text": "01哲學"
+        },
+        {
+            "id": "14",
+            "url": "#",
+            "text": "武備志"
+        },
+        {
+            "id": "15",
+            "url": "#",
+            "text": "一物"
+        },
+        {
+            "id": "16",
+            "url": "#",
+            "text": "01影像"
+        },
+        {
+            "id": "17",
+            "url": "#",
+            "text": "01活動"
+        },
+        {
+            "id": "18",
+            "url": "#",
+            "text": "01空間"
+        },
+        {
+            "id": "19",
+            "url": "#",
+            "text": "01空間2"
+        },
+        {
+            "id": "20",
+            "url": "#",
+            "text": "01空間3"
+        },
+        {
+            "id": "21",
+            "url": "#",
+            "text": "01空間4"
+        },
+        {
+            "id": "22",
+            "url": "#",
+            "text": "01空間5"
+        },
+        {
+            "id": "23",
+            "url": "#",
+            "text": "01空間6"
+        },
+        {
+            "id": "24",
+            "url": "#",
+            "text": "會員專區"
+        }
+    ],
+
+    "articles": [
+        {
+            "key": "d23d32ifhu",
+            "image": "/img1.jpg",
+            "title": "title 1",
+            "preview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a turpis tortor. In rhoncus eleifend dolor ac pretium. Cras interdum mollis ultricies. Mauris porttitor dui quis neque varius vestibulum. Donec ultricies mauris lectus, et mattis ante ullamcorper ut. Cras dictum lorem vitae velit pretium, nec dignissim quam iaculis. Pellentesque eget faucibus mauris, eu porta lectus. Aliquam erat volutpat. Etiam at massa et enim accumsan faucibus.",
+            "url": "#"
+        },
+        {
+            "key": "23f3hif",
+            "image": "/img2.jpg",
+            "title": "title 2",
+            "preview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a turpis tortor. In rhoncus eleifend dolor ac pretium. Cras interdum mollis ultricies. Mauris porttitor dui quis neque varius vestibulum. Donec ultricies mauris lectus, et mattis ante ullamcorper ut. Cras dictum lorem vitae velit pretium, nec dignissim quam iaculis. Pellentesque eget faucibus mauris, eu porta lectus. Aliquam erat volutpat. Etiam at massa et enim accumsan faucibus.",
+            "url": "#"
+        },
+        {
+            "key": "909ewflk",
+            "image": "/img3.jpg",
+            "title": "title 3",
+            "preview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a turpis tortor. In rhoncus eleifend dolor ac pretium. Cras interdum mollis ultricies. Mauris porttitor dui quis neque varius vestibulum. Donec ultricies mauris lectus, et mattis ante ullamcorper ut. Cras dictum lorem vitae velit pretium, nec dignissim quam iaculis. Pellentesque eget faucibus mauris, eu porta lectus. Aliquam erat volutpat. Etiam at massa et enim accumsan faucibus.",
+            "url": "#"
+        },
+        {
+            "key": "23f3t45hif",
+            "image": "/img4.jpg",
+            "title": "title 4",
+            "preview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a turpis tortor. In rhoncus eleifend dolor ac pretium. Cras interdum mollis ultricies. Mauris porttitor dui quis neque varius vestibulum. Donec ultricies mauris lectus, et mattis ante ullamcorper ut. Cras dictum lorem vitae velit pretium, nec dignissim quam iaculis. Pellentesque eget faucibus mauris, eu porta lectus. Aliquam erat volutpat. Etiam at massa et enim accumsan faucibus.",
+            "url": "#"
+        },
+        {
+            "key": "y5u65",
+            "image": "/img5.jpg",
+            "title": "title 5",
+            "preview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a turpis tortor. In rhoncus eleifend dolor ac pretium. Cras interdum mollis ultricies. Mauris porttitor dui quis neque varius vestibulum. Donec ultricies mauris lectus, et mattis ante ullamcorper ut. Cras dictum lorem vitae velit pretium, nec dignissim quam iaculis. Pellentesque eget faucibus mauris, eu porta lectus. Aliquam erat volutpat. Etiam at massa et enim accumsan faucibus.",
+            "url": "#"
+        },
+        {
+            "key": "909ewu65uflk",
+            "image": "/img6.jpg",
+            "title": "title 6",
+            "preview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a turpis tortor. In rhoncus eleifend dolor ac pretium. Cras interdum mollis ultricies. Mauris porttitor dui quis neque varius vestibulum. Donec ultricies mauris lectus, et mattis ante ullamcorper ut. Cras dictum lorem vitae velit pretium, nec dignissim quam iaculis. Pellentesque eget faucibus mauris, eu porta lectus. Aliquam erat volutpat. Etiam at massa et enim accumsan faucibus.",
+            "url": "#"
+        }
+    ]
+}
