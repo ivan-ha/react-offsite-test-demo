@@ -1,106 +1,10 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import 'whatwg-fetch';
 import ListView from './components/list-view'
 import NavigationBar from './components/navigation-bar'
 
-const categories = [
-    {
-        url: '#',
-        text: '01觀點'
-    },
-    {
-        url: '#',
-        text: '01博評'
-    },
-    {
-        url: '#',
-        text: '社區'
-    },
-    {
-        url: '#',
-        text: '娛樂'
-    },
-    {
-        url: '#',
-        text: '韓國大選'
-    },
-    {
-        url: '#',
-        text: '國際'
-    },
-    {
-        url: '#',
-        text: '女生'
-    },
-    {
-        url: '#',
-        text: '藝術3月'
-    },
-    {
-        url: '#',
-        text: '藝文創意'
-    },
-    {
-        url: '#',
-        text: '體育'
-    },
-    {
-        url: '#',
-        text: '熱話'
-    },
-    {
-        url: '#',
-        text: '科技玩物'
-    },
-    {
-        url: '#',
-        text: '01哲學'
-    },
-    {
-        url: '#',
-        text: '武備志'
-    },
-    {
-        url: '#',
-        text: '一物'
-    },
-    {
-        url: '#',
-        text: '01影像'
-    },
-    {
-        url: '#',
-        text: '01活動'
-    },
-    {
-        url: '#',
-        text: '01空間'
-    },
-    {
-        url: '#',
-        text: '01空間2'
-    },
-    {
-        url: '#',
-        text: '01空間3'
-    },
-    {
-        url: '#',
-        text: '01空間4'
-    },
-    {
-        url: '#',
-        text: '01空間5'
-    },
-    {
-        url: '#',
-        text: '01空間6'
-    },
-    {
-        url: '#',
-        text: '會員專區'
-    },
-];
+const categoriesUrl = 'http://localhost:3000/categories';
 const dummyData = [
     {
         key: 'd23d32ifhu',
@@ -147,10 +51,30 @@ const dummyData = [
 ]
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            categories: []
+        };
+
+        this.getCategories();
+    }
+
+    getCategories() {
+        fetch(categoriesUrl).then((response) => {
+            return response.json();
+        }).then((json) => {
+            this.setState({
+                categories: json
+            });
+        });
+    }
+
     render() {
         return (
             <div>
-                <NavigationBar categories={categories} />
+                <NavigationBar categories={this.state.categories} />
                 <ListView articles={dummyData} />
             </div>
         );
