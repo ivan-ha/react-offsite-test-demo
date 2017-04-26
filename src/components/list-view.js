@@ -6,29 +6,44 @@ class ListView extends Component {
     constructor(props) {
         super(props);
 
-        this.listItems = this.props.articles.map((article) => {
-            return (
-                <ListViewItem
-                    key={article.key}
-                    article={article} />
-            );
-        });
-
         this.state = {
-            lists: this.listItems
+            page: 1,
+            hasMore: true,
+            lists: []
         };
 
+        this.getArticles(this.state.page);
         this.generateListItems = this.generateListItems.bind(this);
     }
 
-    generateListItems() {
-        const moreLists = [];
-        moreLists.push(this.listItems);
+    getArticles(page) {
+        fetch(`http://localhost:3000/articles?_page=${page}&_limit=5`).then((response) => {
+            return response.json();
+        }).then((json) => {
+            // Step infinite scroll when reaching end of data
+            if (json.length === 0) {
+                this.setState({...this.state, hasMore: false});
+            }
 
-        setTimeout(() => {
             this.setState({
-                lists: this.state.lists.concat(moreLists)
+                lists: this.state.lists.concat(json.map((article) => {
+                    return (
+                        <ListViewItem
+                            key={article.id}
+                            article={article} />
+                    );
+                }))
             });
+        });
+    }
+
+    generateListItems() {
+        // Update pagination
+        this.setState({...this.state, page: this.state.page + 1});
+
+        // Some intented delay for pagination loading
+        setTimeout(() => {
+            this.getArticles(this.state.page);
         }, 1000);
     }
 
@@ -36,9 +51,11 @@ class ListView extends Component {
         return (
             <ul className='col-md-8 list-group'>
                 <InfiniteScroll
+                    scrollThreshold={1}
                     next={this.generateListItems}
-                    hasMore={true}
-                    loader={<img src='./img/loading-gif.gif' className='loading-gif'/>} >
+                    hasMore={this.state.hasMore}
+                    loader={<img src='./img/loading-gif.gif' className='loading-gif'/>}
+                    endMessage={<b>End of list! Thanks for watching😀</b>} >
                     {this.state.lists}
                 </InfiniteScroll>
             </ul>
