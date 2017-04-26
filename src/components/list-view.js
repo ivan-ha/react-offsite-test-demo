@@ -38,7 +38,7 @@ class ListView extends Component {
                 <InfiniteScroll
                     next={this.generateListItems}
                     hasMore={true}
-                    loader={<h4>Loading...</h4>}>
+                    loader={<img src='./img/loading-gif.gif' className='loading-gif'/>} >
                     {this.state.lists}
                 </InfiniteScroll>
             </ul>

@@ -20,3 +20,9 @@ ul.nav li {
 body {
     padding-top: 110px;
 }
+
+img.loading-gif {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+}
