@@ -26,3 +26,12 @@ img.loading-gif {
     display: block;
     margin: 0 auto;
 }
+
+p.disclaimer-text {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-right: 10px;
+    color: #aaa;
+    font-size: 90%;
+}

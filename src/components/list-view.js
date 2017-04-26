@@ -20,7 +20,7 @@ class ListView extends Component {
         fetch(`http://localhost:3000/articles?_page=${page}&_limit=5`).then((response) => {
             return response.json();
         }).then((json) => {
-            // Step infinite scroll when reaching end of data
+            // Stop infinite scroll when reaching end of data
             if (json.length === 0) {
                 this.setState({...this.state, hasMore: false});
             }
