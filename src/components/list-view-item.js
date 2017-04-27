@@ -7,7 +7,7 @@ const ListViewItem = ({article}) => {
     const articleUrl = article.url
 
     return (
-        <li onClick={() => alert(`Open "${articleUrl}"`)} className='list-group-item'>
+        <li onClick={() => alert(`Should open "${articleTitle}"`)} className='list-group-item'>
             <div className='media'>
                 <div className='media-left'>
                     <img className='media-object' src={imageUrl}></img>
