@@ -9,9 +9,7 @@ const ListViewItem = ({article}) => {
     return (
         <li onClick={() => alert(`Should open "${articleTitle}"`)} className='list-group-item'>
             <div className='media'>
-                <div className='media-left'>
-                    <img className='media-object' src={imageUrl}></img>
-                </div>
+                <img className='pull-left img-responsive list-view-img' src={imageUrl} />
 
                 <div className='media-body'>
                     <h4 className='media-heading'>

@@ -27,6 +27,10 @@ img.loading-gif {
     margin: 0 auto;
 }
 
+img.list-view-img {
+    max-width: 33.33%;
+}
+
 p.disclaimer-text {
     position: fixed;
     bottom: 0;

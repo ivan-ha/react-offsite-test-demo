@@ -33,7 +33,7 @@ class UserPanel extends Component {
         );
 
         return (
-            <div className='col-md-4 user-panel'>
+            <div className='col-md-4 col-md-push-8 user-panel'>
                 <div className='panel panel-default'>
                     <div className='panel-heading'>
                         <h3 className='panel-title'>User Panel</h3>

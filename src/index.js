@@ -32,8 +32,8 @@ class App extends Component {
         return (
             <div>
                 <NavigationBar categories={this.state.categories} />
-                <ListView />
                 <UserPanel />
+                <ListView />
             </div>
         );
     }

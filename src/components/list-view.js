@@ -17,7 +17,7 @@ class ListView extends Component {
     }
 
     getArticles(page) {
-        fetch(`http://localhost:3000/articles?_page=${page}&_limit=5`).then((response) => {
+        fetch(`http://localhost:3000/articles?_page=${page}&_limit=6`).then((response) => {
             return response.json();
         }).then((json) => {
             // Stop infinite scroll when reaching end of data
@@ -49,7 +49,7 @@ class ListView extends Component {
 
     render() {
         return (
-            <ul className='col-md-8 list-group'>
+            <ul className='col-md-8 col-md-pull-4 list-group'>
                 <InfiniteScroll
                     scrollThreshold={1}
                     next={this.generateListItems}
