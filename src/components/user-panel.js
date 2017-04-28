@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import passwordHash from 'password-hash';
 import Greeting from './greeting';
 import SignIn from './sign-in';
 import SignUp from './sign-up';
@@ -14,7 +15,7 @@ class UserPanel extends Component {
 
         // Create default dummy account
         localStorage.setItem('account', JSON.stringify({
-            'foo@bar.com': 'hello'
+            'foo@bar.com': passwordHash.generate('hello')
         }));
     }
 
@@ -47,7 +48,7 @@ class UserPanel extends Component {
     }
 
     signInHandler(email, password) {
-        if (this.getPassword(email) === password) {
+        if (passwordHash.verify(password, this.getPassword(email))) {
             this.setState({
                 name: email,
                 login: true
@@ -64,7 +65,7 @@ class UserPanel extends Component {
 
     addUser(email, password) {
         let account = JSON.parse(localStorage.getItem('account'));
-        account[email] = password;
+        account[email] = passwordHash.generate(password);
         localStorage.setItem('account', JSON.stringify(account));
     }
 }
