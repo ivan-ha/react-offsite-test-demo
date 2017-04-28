@@ -29,7 +29,8 @@ class UserPanel extends Component {
             <div>
                 <SignIn
                     onSignInSubmit={(email, password) => this.signInHandler(email, password)}/>
-                <SignUp />
+                <SignUp
+                    onSignUpSubmit={(email, password, confirmPassword) => this.signUpHandler(email, password, confirmPassword)} />
             </div>
         );
 
@@ -59,8 +60,28 @@ class UserPanel extends Component {
         }
     }
 
+    signUpHandler(email, password, confirmPassword) {
+        if (password !== confirmPassword) {
+            alert('The passwords you entered do no match.')
+        }
+        else if (this.hasUser(email)) {
+            alert('The email has been used.')
+        }
+        else {
+            this.addUser(email, password);
+            this.setState({
+                name: email,
+                login: true
+            });
+        }
+    }
+
     getPassword(email) {
         return JSON.parse(localStorage.getItem('account'))[email];
+    }
+
+    hasUser(email) {
+        return JSON.parse(localStorage.getItem('account')).hasOwnProperty(email);
     }
 
     addUser(email, password) {

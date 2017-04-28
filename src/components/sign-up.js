@@ -1,6 +1,14 @@
 import React from 'react';
 
-const SignUp = () => {
+const SignUp = ({onSignUpSubmit}) => {
+    const getValueById = (id) => {
+        return document.querySelector(`#${id}`).value;
+    };
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+        onSignUpSubmit(getValueById('sign-up-email'), getValueById('sign-up-password'), getValueById('sign-up-confirm-password'));
+    };
+
     return (
         <div className='sign-up'>
             <div className='panel panel-info'>
@@ -8,7 +16,7 @@ const SignUp = () => {
                     <h4 className='panel-title'>Sign Up</h4>
                 </div>
                 <div className='panel-body'>
-                    <form>
+                    <form onSubmit={onSubmitHandler}>
                         <div className='form-group'>
                             <label htmlFor='sign-up-email'>Email address</label>
                             <input type='email' className='form-control' id='sign-up-email' placeholder='Email' />
