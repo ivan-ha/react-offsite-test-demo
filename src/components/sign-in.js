@@ -6,7 +6,7 @@ const SignIn = ({onSignInSubmit}) => {
     };
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        onSignInSubmit(getValueById('input-email'), getValueById('input-password'));
+        onSignInSubmit(getValueById('sign-in-email'), getValueById('sign-in-password'));
     };
 
     return (
@@ -18,12 +18,12 @@ const SignIn = ({onSignInSubmit}) => {
                 <div className='panel-body'>
                     <form onSubmit={onSubmitHandler}>
                         <div className='form-group'>
-                            <label htmlFor='input-email'>Email address</label>
-                            <input type='email' className='form-control' id='input-email' placeholder='Email' />
+                            <label htmlFor='sign-in-email'>Email address</label>
+                            <input type='email' className='form-control' id='sign-in-email' placeholder='Email' />
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='input-password'>Password</label>
-                            <input type='password' className='form-control' id='input-password' placeholder='Password' />
+                            <label htmlFor='sign-in-password'>Password</label>
+                            <input type='password' className='form-control' id='sign-in-password' placeholder='Password' />
                         </div>
                         <button type='submit' className='btn btn-default'>Sign in</button>
                     </form>

@@ -10,16 +10,16 @@ const SignUp = () => {
                 <div className='panel-body'>
                     <form>
                         <div className='form-group'>
-                            <label htmlFor='input-email'>Email address</label>
-                            <input type='email' className='form-control' id='input-email' placeholder='Email' />
+                            <label htmlFor='sign-up-email'>Email address</label>
+                            <input type='email' className='form-control' id='sign-up-email' placeholder='Email' />
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='input-password'>Password</label>
-                            <input type='password' className='form-control' id='input-password' placeholder='Password' />
+                            <label htmlFor='sign-up-password'>Password</label>
+                            <input type='password' className='form-control' id='sign-up-password' placeholder='Password' />
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='input-password'>Confirm password</label>
-                            <input type='password' className='form-control' id='input-password' placeholder='Confirm password' />
+                            <label htmlFor='sign-up-password'>Confirm password</label>
+                            <input type='password' className='form-control' id='sign-up-confirm-password' placeholder='Confirm password' />
                         </div>
                         <button type='submit' className='btn btn-default'>Sign up</button>
                     </form>
