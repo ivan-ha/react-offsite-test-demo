@@ -14,9 +14,7 @@ class UserPanel extends Component {
         };
 
         // Create default dummy account
-        localStorage.setItem('account', JSON.stringify({
-            'foo@bar.com': passwordHash.generate('hello')
-        }));
+        this.addUser('foo@bar.com', 'hello');
     }
 
     render() {
@@ -85,8 +83,10 @@ class UserPanel extends Component {
     }
 
     addUser(email, password) {
-        let account = JSON.parse(localStorage.getItem('account'));
-        account[email] = passwordHash.generate(password);
+        let account = JSON.parse(localStorage.getItem('account')) || {};
+        if (!account.hasOwnProperty(email)) {
+            account[email] = passwordHash.generate(password);
+        }
         localStorage.setItem('account', JSON.stringify(account));
     }
 }
