@@ -23,7 +23,7 @@ class UserPanel extends Component {
         const greeting = (
             <Greeting
                 user={this.state.name}
-                onSignOutClick={() => this.setState({...this.state, login: false})} />
+                onSignOutClick={() => this.setState({name: null, login: false})} />
         );
         const signInUp = (
             <div>
