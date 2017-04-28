@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'whatwg-fetch';
 import ListView from './components/list-view'
 import NavigationBar from './components/navigation-bar'
+import UserPanel from './components/user-panel';
 
 const categoriesUrl = 'http://localhost:3000/categories';
 
@@ -32,6 +33,7 @@ class App extends Component {
             <div>
                 <NavigationBar categories={this.state.categories} />
                 <ListView />
+                <UserPanel />
             </div>
         );
     }
