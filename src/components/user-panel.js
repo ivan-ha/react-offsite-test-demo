@@ -14,7 +14,7 @@ class UserPanel extends Component {
         };
 
         // Create default dummy account
-        this.addUser('foo@bar.com', 'hello');
+        this.addUser('foo@bar.com', 'hello2017');
     }
 
     render() {
