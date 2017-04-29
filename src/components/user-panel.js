@@ -48,10 +48,7 @@ class UserPanel extends Component {
 
     signInHandler(email, password) {
         if (passwordHash.verify(password, this.getPassword(email))) {
-            this.setState({
-                name: email,
-                login: true
-            });
+            this.loginUser(email);
         }
         else {
             alert('Incorrect credentials!');
@@ -73,10 +70,7 @@ class UserPanel extends Component {
         }
         else {
             this.addUser(email, password);
-            this.setState({
-                name: email,
-                login: true
-            });
+            this.loginUser(email);
         }
     }
 
@@ -94,6 +88,13 @@ class UserPanel extends Component {
             account[email] = passwordHash.generate(password);
         }
         localStorage.setItem('account', JSON.stringify(account));
+    }
+
+    loginUser(email) {
+        this.setState({
+            name: email,
+            login: true
+        });
     }
 
     isEmail(email) {
