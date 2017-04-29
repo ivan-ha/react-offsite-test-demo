@@ -60,10 +60,16 @@ class UserPanel extends Component {
 
     signUpHandler(email, password, confirmPassword) {
         if (password !== confirmPassword) {
-            alert('The passwords you entered do no match.')
+            alert('The passwords you entered do no match.');
         }
         else if (this.hasUser(email)) {
-            alert('The email has been used.')
+            alert('The email has been used.');
+        }
+        else if (!this.isEmail(email)) {
+            alert('The email is invalid.');
+        }
+        else if (!this.isSafePassword(password)) {
+            alert('The password had to be 6-12 alphanumeric.');
         }
         else {
             this.addUser(email, password);
@@ -88,6 +94,16 @@ class UserPanel extends Component {
             account[email] = passwordHash.generate(password);
         }
         localStorage.setItem('account', JSON.stringify(account));
+    }
+
+    isEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+    isSafePassword(password) {
+        const re = /^([a-zA-Z0-9_-]){6,12}$/;
+        return re.test(password);
     }
 }
 
