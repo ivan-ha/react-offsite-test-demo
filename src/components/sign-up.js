@@ -19,17 +19,18 @@ const SignUp = ({onSignUpSubmit}) => {
                     <form onSubmit={onSubmitHandler}>
                         <div className='form-group'>
                             <label htmlFor='sign-up-email'>Email address</label>
-                            <input type='email' className='form-control' id='sign-up-email' placeholder='Email' />
+                            <input type='email' className='form-control' id='sign-up-email' placeholder='Email' required />
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='sign-up-password'>Password</label>
-                            <input type='password' className='form-control' id='sign-up-password' placeholder='Password' />
+                            <label htmlFor='sign-up-password'>Password *</label>
+                            <input type='password' className='form-control' id='sign-up-password' placeholder='Password' required />
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='sign-up-password'>Confirm password</label>
-                            <input type='password' className='form-control' id='sign-up-confirm-password' placeholder='Confirm password' />
+                            <label htmlFor='sign-up-password'>Confirm password *</label>
+                            <input type='password' className='form-control' id='sign-up-confirm-password' placeholder='Confirm password' required />
                         </div>
-                        <button type='submit' className='btn btn-default'>Sign up</button>
+                        <em className="help-block">* Need to be 6-12 alphanumeric chars.</em>
+                        <button type='submit' className='btn btn-info pull-right'>Sign up</button>
                     </form>
                 </div>
             </div>

@@ -19,13 +19,13 @@ const SignIn = ({onSignInSubmit}) => {
                     <form onSubmit={onSubmitHandler}>
                         <div className='form-group'>
                             <label htmlFor='sign-in-email'>Email address</label>
-                            <input type='email' className='form-control' id='sign-in-email' placeholder='Email' />
+                            <input type='email' className='form-control' id='sign-in-email' placeholder='Email' required />
                         </div>
                         <div className='form-group'>
                             <label htmlFor='sign-in-password'>Password</label>
-                            <input type='password' className='form-control' id='sign-in-password' placeholder='Password' />
+                            <input type='password' className='form-control' id='sign-in-password' placeholder='Password' required />
                         </div>
-                        <button type='submit' className='btn btn-default'>Sign in</button>
+                        <button type='submit' className='btn btn-success pull-right'>Sign in</button>
                     </form>
                 </div>
             </div>
