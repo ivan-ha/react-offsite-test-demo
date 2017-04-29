@@ -1,10 +1,17 @@
 # React Demo
-React demo with sticky navbar, infinite scroll and user login
+React demo with sticky navbar, infinite scroll and user sign-up / login.
 
 ### Build method
 1. `npm install`
 2. `npm start`
 3. Visit [localhost:8080](localhost:8080)
+
+### Users' credentials
+- Without implementing the backend, the users' credentials are stored in browser's LocalStorage. With a format of key-value pair `{email, hashed password}`.
+- To sign-up a new user, please use a valid email and password with 6-12 alphanumeric chars.
+- A default user had been created:
+    - email: __foo@bar.com__
+    - password: __hello2017__
 
 ### Reserved ports
 | Port | Usage                                                                                |
