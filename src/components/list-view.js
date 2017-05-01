@@ -44,7 +44,7 @@ class ListView extends Component {
         // Some intented delay for pagination loading
         setTimeout(() => {
             this.getArticles(this.state.page);
-        }, 1000);
+        }, 800);
     }
 
     render() {
