@@ -21,7 +21,7 @@ class UserPanel extends Component {
         const greeting = (
             <Greeting
                 user={this.state.name}
-                onSignOutClick={() => this.setState({name: null, login: false})} />
+                onSignOutClick={() => this.signOutHandler()} />
         );
         const signInUp = (
             <div>
@@ -44,6 +44,10 @@ class UserPanel extends Component {
                 </div>
             </div>
         );
+    }
+
+    signOutHandler() {
+        this.logoutUser();
     }
 
     signInHandler(email, password) {
@@ -94,6 +98,13 @@ class UserPanel extends Component {
         this.setState({
             name: email,
             login: true
+        });
+    }
+
+    logoutUser() {
+        this.setState({
+            name: null,
+            login: false
         });
     }
 
