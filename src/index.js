@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {createStore, applyMiddleware} from 'redux';
+import {Provider} from 'react-redux';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 import 'whatwg-fetch';
-import ListView from './components/list-view'
-import NavigationBar from './components/navigation-bar'
-import UserPanel from './components/user-panel';
+import reducer from './reducers';
+import Container from './containers';
+
+const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 const App = () => {
     return (
-        <div>
-            <NavigationBar />
-            <UserPanel />
-            <ListView />
-        </div>
+        <Provider store={store}>
+            <Container />
+        </Provider>
     );
 }
 
