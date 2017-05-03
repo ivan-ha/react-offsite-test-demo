@@ -13,7 +13,7 @@ const receiveArticles = (page, hasMore, json) => {
         type: RECEIVE_ARTICLES,
         page,
         hasMore,
-        lists: json.map(article => article)
+        lists: json
     };
 };
 

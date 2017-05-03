@@ -50,8 +50,8 @@ class Container extends Component {
 }
 
 const mapStateToProps = (state) => {
-    const {page} = state.articles;
-    const {articlesIsFetching, lists, hasMore} = state.articles || {
+    const {page, articlesIsFetching, lists, hasMore} = state.articles || {
+        page: 1,
         articlesIsFetching: true,
         hasMore: true,
         lists: []

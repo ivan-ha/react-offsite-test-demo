@@ -10,7 +10,7 @@ const requestCategories = () => {
 const receiveCategories = (json) => {
     return {
         type: RECEIVE_CATEGORIES,
-        categories: json.map(category => category)
+        categories: json
     };
 };
 

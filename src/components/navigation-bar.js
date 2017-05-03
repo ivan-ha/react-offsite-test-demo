@@ -1,7 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
 import NavigationBarItem from './navigation-bar-item'
-
-const categoriesUrl = 'http://localhost:3000/categories';
 
 const NavigationBar = ({categories}) => {
     const categoryItems = categories.categories.map((category) => {
@@ -16,7 +14,7 @@ const NavigationBar = ({categories}) => {
         <nav className='navbar navbar-default navbar-fixed-top'>
             <div className='container-fluid'>
                 <div className="navbar-header">
-                    <button type="button" className="pull-left navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" className="pull-left navbar-toggle collapsed" data-toggle="collapse" data-target="#categories-navbar" aria-expanded="false">
                         <span className="sr-only">Toggle navigation</span>
                         <span className="icon-bar"></span>
                         <span className="icon-bar"></span>
@@ -25,7 +23,7 @@ const NavigationBar = ({categories}) => {
                     <a className="navbar-brand" href="#">HK01</a>
                 </div>
 
-                <div className='collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+                <div className='collapse navbar-collapse' id="categories-navbar">
                     <ul className='nav navbar-nav'>
                         {categoryItems}
                     </ul>

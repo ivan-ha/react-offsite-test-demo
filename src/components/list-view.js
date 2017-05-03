@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ListViewItem from './list-view-item';
 import InfiniteScroll from 'react-infinite-scroll-component';
 

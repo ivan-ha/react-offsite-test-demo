@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Greeting from './greeting';
 import SignIn from './sign-in';
 import SignUp from './sign-up';
