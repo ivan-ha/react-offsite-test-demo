@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchArticlesIfNeeded, fetchCategoriesIfNeeded} from '../actions';
+import {fetchArticlesIfNeeded, fetchCategoriesIfNeeded, signUpHandler, signInHandler, signOutHandler, initUsers} from '../actions';
 import ListView from '../components/list-view';
 import NavigationBar from '../components/navigation-bar';
 import UserPanel from '../components/user-panel';
@@ -11,6 +11,7 @@ class Container extends Component {
         this.getNextArticles = this.getNextArticles.bind(this);
         this.props.dispatch(fetchCategoriesIfNeeded());
         this.props.dispatch(fetchArticlesIfNeeded(this.props.articles.page));
+        this.props.dispatch(initUsers('foo@bar.com', 'hello2017'));
     }
 
     getNextArticles = () => {
@@ -18,11 +19,28 @@ class Container extends Component {
         this.props.dispatch(fetchArticlesIfNeeded(page));
     }
 
+    signUp = (email, password, confirmPassword) => {
+        this.props.dispatch(signUpHandler(email, password, confirmPassword));
+    }
+
+    signIn = (email, password) => {
+        this.props.dispatch(signInHandler(email, password));
+    }
+
+    signOut = () => {
+        this.props.dispatch(signOutHandler());
+    }
+
     render() {
         return (
             <div>
                 <NavigationBar categories={this.props.categories}/>
-                <UserPanel />
+                <UserPanel
+                    email={this.props.users.email}
+                    login={this.props.users.login}
+                    signUp={this.signUp}
+                    signIn={this.signIn}
+                    signOut={this.signOut} />
                 <ListView
                     articles={this.props.articles}
                     getNextArticles={this.getNextArticles} />
@@ -42,6 +60,10 @@ const mapStateToProps = (state) => {
         categoriesIsFetching: true,
         categories: []
     }
+    const {email, login} = state.users || {
+        email: null,
+        login: false
+    };
 
     return {
         articles: {
@@ -53,6 +75,10 @@ const mapStateToProps = (state) => {
         categories: {
             categoriesIsFetching,
             categories
+        },
+        users: {
+            email,
+            login
         }
     }
 };
