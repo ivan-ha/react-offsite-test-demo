@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:ivan-ha/react-offsite-test-demo.git",
   "scripts": {
-    "start": "node ./node_modules/json-server/bin/index.js --watch data/db.json & node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+    "start": "node ./node_modules/json-server/bin/index.js --watch data/db.json --delay 500 & node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "Ivan Ha",
   "license": "ISC",
