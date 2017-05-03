@@ -13,6 +13,40 @@ React demo with sticky navbar, infinite scroll and user sign-up / login.
     - email: __foo@bar.com__
     - password: __hello2017__
 
+### State structure
+```json
+{
+  "articles": {
+    "page": "paginationNumber",
+    "articlesIsFetching": "boolean",
+    "hasMore": "boolean",
+    "lists": [
+      {
+        "id": "articleId",
+        "image": "articleImage",
+        "title": "articleTitle",
+        "preview": "articleTextPreview",
+        "url": "articleUrl"
+      }
+    ]
+  },
+  "categories": {
+    "categoriesIsFetching": "boolean",
+    "categories": [
+      {
+        "id": "categoryId",
+        "url": "categoryUrl",
+        "text": "categoryTitleText"
+      }
+    ]
+  },
+  "users": {
+    "email": "userEmail",
+    "login": "boolean"
+  }
+}
+```
+
 ### Reserved ports
 | Port | Usage                                                                                |
 |------|--------------------------------------------------------------------------------------|
