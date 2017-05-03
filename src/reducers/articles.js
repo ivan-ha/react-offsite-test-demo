@@ -1,7 +1,7 @@
 import {REQUEST_ARTICLES, RECEIVE_ARTICLES} from '../actions';
 
 const initialArticlesState = {
-    isFetching: false,
+    articlesIsFetching: false,
     page: 1,
     hasMore: true,
     lists: []
@@ -11,11 +11,11 @@ const articles = (state = initialArticlesState, action) => {
     switch (action.type) {
         case REQUEST_ARTICLES:
             return Object.assign({}, state, {
-                isFetching: true
+                articlesIsFetching: true
             });
         case RECEIVE_ARTICLES:
             return Object.assign({}, state, {
-                isFetching: false,
+                articlesIsFetching: false,
                 page: parseInt(action.page) + 1,
                 hasMore: action.hasMore,
                 lists: [...state.lists, ...action.lists]
