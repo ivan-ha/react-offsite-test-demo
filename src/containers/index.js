@@ -4,6 +4,7 @@ import {fetchArticlesIfNeeded, fetchCategoriesIfNeeded, signUpHandler, signInHan
 import ListView from '../components/list-view';
 import NavigationBar from '../components/navigation-bar';
 import UserPanel from '../components/user-panel';
+import CountryList from '../components/country-list';
 
 class Container extends Component {
     constructor(props) {
@@ -32,8 +33,14 @@ class Container extends Component {
     }
 
     render() {
+        const countries = [
+            'US', 'Japan', 'Korea', 'Italy', 'Thiland'
+        ];
+
         return (
             <div>
+                <CountryList countries={countries}/>
+
                 <NavigationBar categories={this.props.categories}/>
                 <UserPanel
                     email={this.props.users.email}
