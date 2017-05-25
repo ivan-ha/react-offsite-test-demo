@@ -6,6 +6,10 @@ React demo with sticky navbar, infinite scroll and user sign-up / login.
 2. `npm start`
 3. Visit [localhost:8080](localhost:8080)
 
+### Unit testing
+1. `npm install`
+2. `npm test`
+
 ### Data and dummy API
 - All news articles and images were taken from [HK01](https://www.hk01.com/). For demo purpose only.
 - Data were declared in `/data/db.json`
